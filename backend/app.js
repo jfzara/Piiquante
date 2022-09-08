@@ -11,6 +11,7 @@ const mongoose = require('mongoose');
 const userRoutes = require('./routes/user');
 require("dotenv").config();
 
+
 mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.bvjnxhq.mongodb.net/?retryWrites=true&w=majority`,
   {
     useNewUrlParser: true,
@@ -35,10 +36,10 @@ app.use((req, res, next) => {
 
 
 
-app.use((req, res) => {
+/*app.use((req, res) => {
   res.json({ message: 'Tout fonctionne bien' });
 });
-app.use('/api/auth', userRoutes);
+app.use('/api/auth', userRoutes);*/
 
 
 module.exports = app;
